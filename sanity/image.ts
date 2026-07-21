@@ -1,10 +1,10 @@
 import imageUrlBuilder from '@sanity/image-url'
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import { sanityClient, isSanityConfigured } from './client'
 
 const builder = isSanityConfigured && sanityClient ? imageUrlBuilder(sanityClient) : null
 
-export function urlForImage(source: SanityImageSource) {
+export function urlForImage(source: unknown) {
   if (!builder) return null
-  return builder.image(source)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return builder.image(source as any)
 }
