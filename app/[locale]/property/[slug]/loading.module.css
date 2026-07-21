@@ -1,0 +1,183 @@
+.wrapper {
+  padding-block: 20px 40px;
+}
+
+/* Top loading bar */
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--border);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.progressIndicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background: var(--blue);
+  border-radius: 0 3px 3px 0;
+  animation: indeterminate 1.1s ease-in-out infinite;
+}
+
+@keyframes indeterminate {
+  0% {
+    left: -40%;
+    width: 40%;
+  }
+  50% {
+    left: 30%;
+    width: 55%;
+  }
+  100% {
+    left: 100%;
+    width: 40%;
+  }
+}
+
+/* Shimmer skeleton blocks */
+.skeleton {
+  position: relative;
+  background: var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--surface) 70%, transparent),
+    transparent
+  );
+  animation: shimmer 1.4s infinite;
+}
+
+[dir='rtl'] .skeleton::after {
+  animation-direction: reverse;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.back {
+  width: 120px;
+  height: 18px;
+  margin-bottom: 16px;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.galleryMain {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 8px;
+}
+
+.galleryThumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.thumb {
+  aspect-ratio: 4 / 3;
+  border-radius: 6px;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lineLg {
+  width: 60%;
+  height: 30px;
+}
+
+.lineSm {
+  width: 40%;
+  height: 18px;
+  margin-bottom: 8px;
+}
+
+.line {
+  width: 100%;
+  height: 14px;
+}
+
+.lineShort {
+  width: 70%;
+  height: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-block: 8px 16px;
+}
+
+.stat {
+  height: 64px;
+  border-radius: 8px;
+}
+
+.aside {
+  align-self: start;
+}
+
+.card {
+  width: 100%;
+  height: 360px;
+  border-radius: 8px;
+}
+
+@media (min-width: 640px) {
+  .gallery {
+    grid-template-columns: 2fr 1fr;
+  }
+  .galleryThumbs {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1.7fr 1fr;
+  }
+  .aside {
+    position: sticky;
+    top: 20px;
+  }
+}
