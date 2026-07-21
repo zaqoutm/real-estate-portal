@@ -25,7 +25,7 @@
   gap: 8px;
   background: var(--yellow);
   padding: 8px;
-  border-radius: var(--radius);
+  border-radius: 5px;
 }
 
 .field {
@@ -93,6 +93,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 21px;
   margin-bottom: 20px;
 }
 
