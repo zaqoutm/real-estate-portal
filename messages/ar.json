@@ -1,0 +1,83 @@
+{
+  "Nav": {
+    "brand": "StayRent",
+    "listProperty": "أدرج عقارك",
+    "signIn": "تسجيل الدخول",
+    "language": "اللغة"
+  },
+  "Hero": {
+    "title": "اعثر على منزلك التالي للإيجار",
+    "subtitle": "ابحث عن أسعار منخفضة للشقق والمنازل والاستوديوهات لإقامتك القصيرة أو الطويلة",
+    "searchPlaceholder": "إلى أين تذهب؟",
+    "anyType": "كل الأنواع",
+    "apartment": "شقة",
+    "house": "منزل",
+    "studio": "استوديو",
+    "villa": "فيلا",
+    "priceRange": "أقصى سعر",
+    "anyPrice": "كل الأسعار",
+    "search": "بحث"
+  },
+  "Listings": {
+    "title": "عقارات للإيجار",
+    "resultsCount": "{count, plural, =0 {لم يتم العثور على عقارات} other {تم العثور على # عقار}}",
+    "perMonth": "شهرياً",
+    "beds": "{count, plural, other {# غرف نوم}}",
+    "baths": "{count, plural, other {# حمامات}}",
+    "area": "{value} م²",
+    "viewDetails": "عرض التفاصيل",
+    "featured": "مميّز",
+    "noResults": "لا توجد عقارات تطابق بحثك. حاول تعديل عوامل التصفية.",
+    "clearFilters": "مسح عوامل التصفية"
+  },
+  "Property": {
+    "backToResults": "العودة إلى النتائج",
+    "perMonth": "شهرياً",
+    "overview": "نظرة عامة",
+    "description": "الوصف",
+    "amenities": "ما يوفره هذا المكان",
+    "details": "تفاصيل العقار",
+    "type": "النوع",
+    "bedrooms": "غرف النوم",
+    "bathrooms": "الحمامات",
+    "size": "المساحة",
+    "availableFrom": "متاح من",
+    "location": "الموقع",
+    "gallery": "الصور",
+    "showAllPhotos": "عرض كل الصور"
+  },
+  "Contact": {
+    "title": "تواصل مع المضيف",
+    "subtitle": "املأ النموذج وسيتواصل معك المضيف",
+    "name": "الاسم الكامل",
+    "namePlaceholder": "اسمك",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "you@example.com",
+    "phone": "رقم الهاتف",
+    "phonePlaceholder": "+31 6 12345678",
+    "message": "الرسالة",
+    "messagePlaceholder": "أنا مهتم بهذا العقار...",
+    "send": "إرسال الرسالة",
+    "sending": "جارٍ الإرسال...",
+    "success": "تم إرسال رسالتك. سيتواصل معك المضيف قريباً.",
+    "errorName": "الرجاء إدخال اسمك",
+    "errorEmail": "الرجاء إدخال بريد إلكتروني صالح",
+    "errorMessage": "الرجاء إدخال رسالة"
+  },
+  "Footer": {
+    "tagline": "الإيجار بكل بساطة.",
+    "company": "الشركة",
+    "about": "من نحن",
+    "careers": "الوظائف",
+    "press": "الصحافة",
+    "support": "الدعم",
+    "help": "مركز المساعدة",
+    "safety": "معلومات السلامة",
+    "cancellation": "خيارات الإلغاء",
+    "discover": "اكتشف",
+    "cities": "المدن الشهيرة",
+    "neighborhoods": "الأحياء",
+    "guides": "أدلة الإيجار",
+    "rights": "جميع الحقوق محفوظة."
+  }
+}

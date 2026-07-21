@@ -1,0 +1,83 @@
+{
+  "Nav": {
+    "brand": "StayRent",
+    "listProperty": "Plaats je woning",
+    "signIn": "Inloggen",
+    "language": "Taal"
+  },
+  "Hero": {
+    "title": "Vind je volgende huurwoning",
+    "subtitle": "Zoek lage prijzen voor appartementen, huizen en studio's voor je korte of lange verblijf",
+    "searchPlaceholder": "Waar ga je naartoe?",
+    "anyType": "Alle types",
+    "apartment": "Appartement",
+    "house": "Huis",
+    "studio": "Studio",
+    "villa": "Villa",
+    "priceRange": "Max. prijs",
+    "anyPrice": "Alle prijzen",
+    "search": "Zoeken"
+  },
+  "Listings": {
+    "title": "Woningen te huur",
+    "resultsCount": "{count, plural, =0 {Geen woningen gevonden} =1 {# woning gevonden} other {# woningen gevonden}}",
+    "perMonth": "per maand",
+    "beds": "{count, plural, =1 {# slaapkamer} other {# slaapkamers}}",
+    "baths": "{count, plural, =1 {# badkamer} other {# badkamers}}",
+    "area": "{value} m²",
+    "viewDetails": "Bekijk details",
+    "featured": "Uitgelicht",
+    "noResults": "Geen woningen komen overeen met je zoekopdracht. Pas je filters aan.",
+    "clearFilters": "Filters wissen"
+  },
+  "Property": {
+    "backToResults": "Terug naar resultaten",
+    "perMonth": "per maand",
+    "overview": "Overzicht",
+    "description": "Beschrijving",
+    "amenities": "Wat deze woning biedt",
+    "details": "Woningdetails",
+    "type": "Type",
+    "bedrooms": "Slaapkamers",
+    "bathrooms": "Badkamers",
+    "size": "Oppervlakte",
+    "availableFrom": "Beschikbaar vanaf",
+    "location": "Locatie",
+    "gallery": "Foto's",
+    "showAllPhotos": "Toon alle foto's"
+  },
+  "Contact": {
+    "title": "Neem contact op met de verhuurder",
+    "subtitle": "Vul het formulier in en de verhuurder neemt contact met je op",
+    "name": "Volledige naam",
+    "namePlaceholder": "Je naam",
+    "email": "E-mailadres",
+    "emailPlaceholder": "jij@voorbeeld.nl",
+    "phone": "Telefoonnummer",
+    "phonePlaceholder": "+31 6 12345678",
+    "message": "Bericht",
+    "messagePlaceholder": "Ik ben geïnteresseerd in deze woning...",
+    "send": "Bericht versturen",
+    "sending": "Versturen...",
+    "success": "Je bericht is verzonden. De verhuurder neemt binnenkort contact op.",
+    "errorName": "Voer je naam in",
+    "errorEmail": "Voer een geldig e-mailadres in",
+    "errorMessage": "Voer een bericht in"
+  },
+  "Footer": {
+    "tagline": "Huren gemakkelijk gemaakt.",
+    "company": "Bedrijf",
+    "about": "Over ons",
+    "careers": "Vacatures",
+    "press": "Pers",
+    "support": "Ondersteuning",
+    "help": "Helpcentrum",
+    "safety": "Veiligheidsinformatie",
+    "cancellation": "Annuleringsopties",
+    "discover": "Ontdekken",
+    "cities": "Populaire steden",
+    "neighborhoods": "Buurten",
+    "guides": "Huurgidsen",
+    "rights": "Alle rechten voorbehouden."
+  }
+}

@@ -1,0 +1,69 @@
+.footer {
+  background: var(--navy-dark);
+  color: #e9edf5;
+  margin-top: 48px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding-block: 40px;
+}
+
+.brandCol {
+  max-width: 320px;
+}
+
+.brand {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.tagline {
+  margin-top: 8px;
+  color: #b9c4da;
+  font-size: 0.95rem;
+}
+
+.colTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  color: #cdd6e8;
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-block: 20px;
+}
+
+.copy {
+  color: #9fabc7;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .top {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}

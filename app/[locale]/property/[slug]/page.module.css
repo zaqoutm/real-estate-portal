@@ -1,0 +1,42 @@
+.page {
+  padding-block: 20px 40px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+[dir='rtl'] .back svg {
+  transform: scaleX(-1);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.aside {
+  align-self: start;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1.7fr 1fr;
+  }
+  .aside {
+    position: sticky;
+    top: 20px;
+  }
+}
