@@ -9,6 +9,8 @@ export function Header() {
   return (
     <header className={styles.header}>
       <h1 style={{ color: 'white' }}>LOGIN TEST BRACH</h1>
+      <h1 style={{ color: 'white' }}>LOGIN TEST BRACH</h1>
+      <h1 style={{ color: 'white' }}>LOGIN TEST BRACH</h1>
       <div className={`container ${styles.inner}`}>
         <Link href='/' className={styles.brand} aria-label={t('brand')}>
           <span className={styles.brandIcon} aria-hidden='true'>
