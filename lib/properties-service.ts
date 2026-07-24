@@ -1,4 +1,4 @@
-import { sanityClient, isSanityConfigured } from '@/sanity/client'
+import { isSanityConfigured, sanityClient } from '@/sanity/client'
 import { allPropertiesQuery, propertyBySlugQuery } from '@/sanity/queries'
 import { demoProperties } from './demo-data'
 import type { Property } from './types'
@@ -8,11 +8,13 @@ export async function getProperties(): Promise<Property[]> {
   if (isSanityConfigured && sanityClient) {
     try {
       const data = await sanityClient.fetch<Property[]>(allPropertiesQuery)
-      if (data && data.length > 0) return data
+      if (data) return data
+      return []
     } catch (error) {
-      console.log('[v0] Sanity fetch failed, using demo data:', error)
+      console.error('getProperties() Sanity fetch failed, using demo data:', error)
     }
   }
+  console.warn('getProperties() Sanity not configured, using demo data.')
   return demoProperties
 }
 
@@ -23,13 +25,8 @@ export async function getPropertyBySlug(slug: string): Promise<Property | null> 
       const data = await sanityClient.fetch<Property | null>(propertyBySlugQuery, { slug })
       if (data) return data
     } catch (error) {
-      console.log('[v0] Sanity fetch failed, using demo data:', error)
+      console.error('getPropertyBySlug() Sanity fetch failed, using demo data:', error)
     }
   }
   return demoProperties.find((p) => p.slug === slug) ?? null
-}
-
-export async function getPropertySlugs(): Promise<string[]> {
-  const properties = await getProperties()
-  return properties.map((p) => p.slug)
 }

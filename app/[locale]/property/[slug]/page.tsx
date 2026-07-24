@@ -1,13 +1,13 @@
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { Link } from '@/i18n/navigation'
-import { getProperties, getPropertyBySlug } from '@/lib/properties'
-import { localized } from '@/lib/types'
-import type { Locale } from '@/i18n/routing'
-import { PropertyGallery } from '@/components/property-gallery'
-import { PropertyDetails } from '@/components/property-details'
 import { ContactForm } from '@/components/contact-form'
+import { PropertyDetails } from '@/components/property-details'
+import { PropertyGallery } from '@/components/property-gallery'
+import { Link } from '@/i18n/navigation'
+import type { Locale } from '@/i18n/routing'
+import { getProperties, getPropertyBySlug } from '@/lib/properties-service'
+import { localized } from '@/lib/types'
+import type { Metadata } from 'next'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { notFound } from 'next/navigation'
 import styles from './page.module.css'
 
 export async function generateStaticParams() {
@@ -15,11 +15,7 @@ export async function generateStaticParams() {
   return properties.map((p) => ({ slug: p.slug }))
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string; slug: string }>
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params
   const property = await getPropertyBySlug(slug)
   if (!property) return { title: 'StayRent' }
@@ -30,11 +26,7 @@ export async function generateMetadata({
   }
 }
 
-export default async function PropertyPage({
-  params,
-}: {
-  params: Promise<{ locale: string; slug: string }>
-}) {
+export default async function PropertyPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params
   setRequestLocale(locale)
 
@@ -46,9 +38,9 @@ export default async function PropertyPage({
 
   return (
     <div className={`container ${styles.page}`}>
-      <Link href="/" className={styles.back}>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-          <path d="m15 18-6-6 6-6" />
+      <Link href='/' className={styles.back}>
+        <svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' aria-hidden='true'>
+          <path d='m15 18-6-6 6-6' />
         </svg>
         {t('backToResults')}
       </Link>

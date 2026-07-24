@@ -1,12 +1,8 @@
-import { setRequestLocale } from 'next-intl/server'
-import { getProperties } from '@/lib/properties'
 import { PropertyExplorer } from '@/components/property-explorer'
+import { getProperties } from '@/lib/properties-service'
+import { setRequestLocale } from 'next-intl/server'
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   setRequestLocale(locale)
 

@@ -8,5 +8,6 @@
   "editor.formatOnPaste": false,
   "prettier.useEditorConfig": false,
   "prettier.useTabs": false,
-  "printWidth": 150
+  "printWidth": 150,
+  "semi": false
 }

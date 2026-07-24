@@ -1,9 +1,9 @@
 'use client'
 
-import { useMemo, useState } from 'react'
-import { useLocale, useTranslations } from 'next-intl'
-import { localized, type Property, type PropertyType } from '@/lib/types'
 import type { Locale } from '@/i18n/routing'
+import { localized, type Property, type PropertyType } from '@/lib/types'
+import { useLocale, useTranslations } from 'next-intl'
+import { useMemo, useState } from 'react'
 import { PropertyCard } from './property-card'
 import styles from './property-explorer.module.css'
 
@@ -51,18 +51,27 @@ export function PropertyExplorer({ properties }: { properties: Property[] }) {
   return (
     <>
       <section className={styles.hero}>
-        <div className="container">
+        <div className='container'>
           <h1 className={styles.heroTitle}>{t('title')}</h1>
           <p className={styles.heroSubtitle}>{t('subtitle')}</p>
 
           <form className={styles.searchBar} onSubmit={onSubmit}>
             <div className={styles.field}>
-              <svg className={styles.fieldIcon} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                <circle cx="12" cy="10" r="3" />
+              <svg
+                className={styles.fieldIcon}
+                width='20'
+                height='20'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth='2'
+                aria-hidden='true'
+              >
+                <path d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z' />
+                <circle cx='12' cy='10' r='3' />
               </svg>
               <input
-                type="text"
+                type='text'
                 className={styles.input}
                 placeholder={t('searchPlaceholder')}
                 aria-label={t('searchPlaceholder')}
@@ -77,11 +86,11 @@ export function PropertyExplorer({ properties }: { properties: Property[] }) {
               value={draft.type}
               onChange={(e) => setDraft({ ...draft, type: e.target.value as Filters['type'] })}
             >
-              <option value="">{t('anyType')}</option>
-              <option value="apartment">{t('apartment')}</option>
-              <option value="house">{t('house')}</option>
-              <option value="studio">{t('studio')}</option>
-              <option value="villa">{t('villa')}</option>
+              <option value=''>{t('anyType')}</option>
+              <option value='apartment'>{t('apartment')}</option>
+              <option value='house'>{t('house')}</option>
+              <option value='studio'>{t('studio')}</option>
+              <option value='villa'>{t('villa')}</option>
             </select>
 
             <select
@@ -90,7 +99,7 @@ export function PropertyExplorer({ properties }: { properties: Property[] }) {
               value={draft.maxPrice}
               onChange={(e) => setDraft({ ...draft, maxPrice: e.target.value })}
             >
-              <option value="">{t('anyPrice')}</option>
+              <option value=''>{t('anyPrice')}</option>
               {priceOptions.map((p) => (
                 <option key={p} value={p}>
                   {`≤ €${p.toLocaleString()}`}
@@ -98,7 +107,7 @@ export function PropertyExplorer({ properties }: { properties: Property[] }) {
               ))}
             </select>
 
-            <button type="submit" className={styles.searchBtn}>
+            <button type='submit' className={styles.searchBtn}>
               {t('search')}
             </button>
           </form>
@@ -114,7 +123,7 @@ export function PropertyExplorer({ properties }: { properties: Property[] }) {
         {results.length === 0 ? (
           <div className={styles.empty}>
             <p>{tl('noResults')}</p>
-            <button type="button" className={styles.clearBtn} onClick={clearFilters}>
+            <button type='button' className={styles.clearBtn} onClick={clearFilters}>
               {tl('clearFilters')}
             </button>
           </div>
